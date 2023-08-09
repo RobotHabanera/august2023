@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { EditBtnComponent } from './edit-btn/edit-btn.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -9,7 +9,7 @@ import { EditBtnComponent } from './edit-btn/edit-btn.component';
     EditBtnComponent
   ],
   imports: [
-    CommonModule
+    RouterModule
   ],
   exports: [
     EditBtnComponent
