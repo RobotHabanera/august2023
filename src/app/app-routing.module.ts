@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./promotions-grid/promotions-grid-routing.module').then(m => m.PromotionsGridRoutingModule)
+    loadChildren: () => import('./content/promotions-grid/promotions-grid-routing.module').then(m => m.PromotionsGridRoutingModule)
   }
 ];
 
