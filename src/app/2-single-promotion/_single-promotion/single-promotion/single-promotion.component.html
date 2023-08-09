@@ -1,0 +1,19 @@
+<ul class="list">
+  <li>
+    <button
+    class="promo-btn flex w-full items-center"
+    href="#">
+    <span class="promo-btn__number">1</span>
+    <span class="promo-btn__name">Definition</span>
+  </button>
+  </li>
+  <li>
+    <button
+      class="promo-btn flex w-full items-center"
+      href="#"
+      [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
+      <span class="promo-btn__number">2</span>
+      <span class="promo-btn__name">Choose Products</span>
+    </button>
+  </li>
+</ul>
