@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'zadanie-rekrutacyjne'`, () => {
+  it(`should have as title 'august-2023'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('zadanie-rekrutacyjne');
+    expect(app.title).toEqual('august-2023');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('zadanie-rekrutacyjne app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('august-2023 app is running!');
   });
 });

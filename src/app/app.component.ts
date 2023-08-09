@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 
 })
 export class AppComponent {
-  title = 'zadanie-rekrutacyjne';
+  title = 'august-2023';
 
 
 

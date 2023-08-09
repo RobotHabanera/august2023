@@ -12,7 +12,7 @@ const routes: Routes = [
     component: TableComponent,
   },
   { path: 'edit',
-    component: SinglePromotionComponent,
+    component: SinglePromotionComponent
   },
   {
     path: 'delete',
@@ -26,6 +26,8 @@ const routes: Routes = [
     SinglePromotionModule,
     PromotionsGridModule
   ],
-  exports: [RouterModule]
+  exports: [
+    RouterModule,
+  ]
 })
 export class PromotionsGridRoutingModule { }
