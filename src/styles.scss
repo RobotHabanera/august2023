@@ -95,15 +95,28 @@ td, th { padding: 0; }
     box-sizing: border-box;
 }
 
+p {
+  font-size: .9rem;
+  margin-bottom: 10px;
+}
 
-input {
-  border: 1px solid #000;
+input,
+textarea,
+select {
   padding: 5px 10px;
 }
 
-.promo-column {
-  border: 1px solid #000;
+input[type=date] {
+  width: 200px!important;
 }
+
+label {
+  display: block;
+  font-size: 12px;
+  text-align: left;
+  padding: 0 0 5px;
+}
+
 
 .promo-btn {
   position: relative;
@@ -138,4 +151,36 @@ input {
 
 .action-btn {
   cursor: pointer;
+}
+
+
+.single-promo {
+  &__heading {
+    border-bottom: 3px solid #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 0 10px;
+    margin: 0 0 24px;
+  }
+  &__subheading {
+    border-bottom: 3px solid #fff;
+    color: gray;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 0 10px;
+  }
+}
+
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  width: auto;
+  margin: 0 auto 20px;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    font-size: 36px;
+  }
 }
