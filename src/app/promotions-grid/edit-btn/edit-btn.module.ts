@@ -4,12 +4,13 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 @NgModule({
   declarations: [
     EditBtnComponent
   ],
   imports: [
-    RouterModule
+    RouterModule,
   ],
   exports: [
     EditBtnComponent

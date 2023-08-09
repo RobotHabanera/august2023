@@ -10,7 +10,7 @@ import { SinglePromotionComponent } from './single-promotion/single-promotion.co
     SinglePromotionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     SinglePromotionComponent

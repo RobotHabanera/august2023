@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class EditBtnComponent {
 
-  test(event:any) {
-    console.log(event.target);
-  }
+
 }
