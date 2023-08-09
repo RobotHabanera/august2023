@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SinglePromotionComponent } from '../2-single-promotion/_single-promotion/single-promotion/single-promotion.component';
-import { TableComponent } from './_table/table.component';
-import { SinglePromotionModule } from '../2-single-promotion/_single-promotion/single-promotion.module';
+import { SinglePromotionComponent } from '../single-promotion/single-promotion/single-promotion/single-promotion.component';
+import { TableComponent } from './table/table.component';
+import { SinglePromotionModule } from '../single-promotion/single-promotion/single-promotion.module';
 import { PromotionsGridModule } from './promotions-grid.module';
 
 
@@ -13,7 +13,6 @@ const routes: Routes = [
   },
   { path: 'edit',
     component: SinglePromotionComponent,
-    pathMatch: 'full'
   },
   {
     path: 'delete',
@@ -25,7 +24,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     SinglePromotionModule,
-    PromotionsGridModule],
+    PromotionsGridModule
+  ],
   exports: [RouterModule]
 })
 export class PromotionsGridRoutingModule { }

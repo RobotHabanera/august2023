@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./1-promotions-grid/promotions-grid-routing.module').then(m => m.PromotionsGridRoutingModule)
+    loadChildren: () => import('./promotions-grid/promotions-grid-routing.module').then(m => m.PromotionsGridRoutingModule)
   }
 ];
 
