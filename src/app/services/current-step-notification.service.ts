@@ -14,7 +14,7 @@ export class CurrentStepNotificationService {
   public currentStepSubject: BehaviorSubject<string | any> = new BehaviorSubject(StepsEnum.Definition);
   currentStep$ = this.currentStepSubject.asObservable();
 
-  sendPageNotification(data:any) {
+  sendStepNotification(data:any) {
     this.currentStepSubject.next(data);
   }
 
