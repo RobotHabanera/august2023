@@ -8,14 +8,14 @@ export class DraftService {
   constructor() { }
 
   // Save Draft
-  saveDraft(pageName:string, value:JSON) {
-    localStorage.setItem(pageName, JSON.stringify(value));
+  saveDraft(stepName:string, value:JSON) {
+    localStorage.setItem(stepName, JSON.stringify(value));
   }
 
 
   // Get Data from the localstorage
-  getLocalStorageData(pageName:string) {
-    return localStorage.getItem(pageName);
+  getLocalStorageData(stepName:string) {
+    return localStorage.getItem(stepName);
   }
 
 }

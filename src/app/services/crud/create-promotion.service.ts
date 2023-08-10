@@ -12,8 +12,7 @@ export class CreatePromotionService {
   stepsEnum = StepsEnum;
 
   constructor() {
-    console.log(StepsEnum.Definition);
-   }
+  }
 
 
    // To jest URL do Firebase Database -> https://promotions-58746-default-rtdb.firebaseio.com/

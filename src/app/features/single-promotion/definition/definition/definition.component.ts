@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// Services
 import { DraftService } from 'src/app/services/draft.service';
 import { StepActivationService } from 'src/app/services/step-activation.service';
+// Enums
+import { StepsEnum } from 'src/app/enums/steps.enum';
 
 @Component({
   selector: 'app-definition',
@@ -33,7 +36,7 @@ export class DefinitionComponent implements OnInit {
     this.fillForm('definition');
     // Listen to Form Value Changes to set new Values inside form
     this.definitionForm.valueChanges.subscribe(value => {
-      this.draftS.saveDraft('definition',value);
+      this.draftS.saveDraft(StepsEnum.Definition, value);
     });
   }
 
@@ -42,8 +45,8 @@ export class DefinitionComponent implements OnInit {
   }
 
 
-  fillForm(pageName:string) {
-    const localStorageData = this.draftS.getLocalStorageData(pageName);
+  fillForm(stepName:string) {
+    const localStorageData = this.draftS.getLocalStorageData(stepName);
     // check if data from localstorage exists
     if (localStorageData !== null) {
       // if data does exist, use that data to setValue on the form
