@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { AddBtnComponent } from './add-btn/add-btn.component';
+
 
 
 
@@ -9,7 +10,7 @@ import { AddBtnComponent } from './add-btn/add-btn.component';
     AddBtnComponent
   ],
   imports: [
-    CommonModule
+    RouterModule
   ],
   exports: [
     AddBtnComponent
