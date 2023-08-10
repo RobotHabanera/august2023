@@ -16,6 +16,9 @@ export class CreatePromotionService {
    }
 
 
+   // To jest URL do Firebase Database -> https://promotions-58746-default-rtdb.firebaseio.com/
+
+
   create(draft:DraftService) {
     // 1. pobiera informacje z localstorage
     var keys = Object.keys(this.stepsEnum);
