@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SinglePromotionComponent } from './single-promotion/single-promotion.component';
 import { DefinitionModule } from './definition/definition.module';
 import { ChooseProductsModule } from './choose-products/choose-products.module';
-import { SetCurrentPageDirective } from 'src/app/directives/set-current-page.directive';
+import { SetCurrentStepDirective } from 'src/app/directives/set-current-step.directive';
 import { ExcludeProductsModule } from './exclude-products/exclude-products.module';
 import { BonusProductsModule } from './bonus-products/bonus-products.module';
 import { ProductsLimitsModule } from './products-limits/products-limits.module';
@@ -20,7 +20,7 @@ import { BackButtonDirective } from 'src/app/directives/go-back.directive';
 @NgModule({
   declarations: [
     SinglePromotionComponent,
-    SetCurrentPageDirective,
+    SetCurrentStepDirective,
     BackButtonDirective
   ],
   imports: [

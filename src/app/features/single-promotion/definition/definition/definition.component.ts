@@ -23,6 +23,7 @@ export class DefinitionComponent implements OnInit {
   ) {}
 
   ngOnInit():void {
+    // Form setup
     this.definitionForm = this.fb.group({
       marketing_name: ['', Validators.required],
       technical_name: ['', Validators.required],
@@ -32,9 +33,9 @@ export class DefinitionComponent implements OnInit {
       start_date: ['', Validators.required],
       finish_date: ['', Validators.required],
     });
-    // Set Initial data if that data exists
+    // Fill out form fields (on init) with data from localstorage
     this.fillForm(StepsEnum.Definition);
-    // Listen to Form Value Changes to set new Values inside form
+    // Listen to Form Value Changes to set new Values inside the form
     this.definitionForm.valueChanges.subscribe(value => {
       this.draftS.saveDraft(StepsEnum.Definition, value);
     });
@@ -44,7 +45,7 @@ export class DefinitionComponent implements OnInit {
     this.stepActivationS.text = event.target.value;
   }
 
-
+  // Fill out form fields with data from localstorage
   fillForm(stepName:string) {
     const localStorageData = this.draftS.getLocalStorageData(stepName);
     // check if data from localstorage exists

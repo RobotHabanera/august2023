@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CurrentPromotionPageNotificationService } from 'src/app/services/current-promotion-page-notification.service';
+import { CurrentStepNotificationService } from 'src/app/services/current-step-notification.service';
 import { StepActivationService } from 'src/app/services/step-activation.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { StepActivationService } from 'src/app/services/step-activation.service'
   templateUrl: './single-promotion.component.html',
   providers: [
     StepActivationService,
-    CurrentPromotionPageNotificationService
+    CurrentStepNotificationService
   ],
   styleUrls: ['./single-promotion.component.scss']
 })
@@ -16,19 +16,19 @@ import { StepActivationService } from 'src/app/services/step-activation.service'
 export class SinglePromotionComponent implements OnInit {
 
   isDisabled: boolean = true;
-  currentPageSubscription!: Subscription;
-  currentPage!: string;
+  currentStepSubscription!: Subscription;
+  currentStep!: string;
 
 
   constructor(
     public stepActivationS: StepActivationService,
-    private currentPageNotificationS: CurrentPromotionPageNotificationService
+    private currentStepNotificationS: CurrentStepNotificationService
   ) {}
 
   ngOnInit():void {
     // Subscribe to Filter Button Event
-    this.currentPageSubscription = this.currentPageNotificationS.currentPage$.subscribe(d => {
-      this.currentPage = d;
+    this.currentStepSubscription = this.currentStepNotificationS.currentStep$.subscribe(d => {
+      this.currentStep = d;
     });
   }
 

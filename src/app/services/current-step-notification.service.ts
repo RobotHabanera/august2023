@@ -5,17 +5,17 @@ import { StepsEnum } from '../enums/steps.enum';
 
 @Injectable()
 
-export class CurrentPromotionPageNotificationService {
+export class CurrentStepNotificationService {
 
 
   constructor() { }
 
   // Change Category Value Notification
-  public currentPageSubject: BehaviorSubject<string | any> = new BehaviorSubject(StepsEnum.Definition);
-  currentPage$ = this.currentPageSubject.asObservable();
+  public currentStepSubject: BehaviorSubject<string | any> = new BehaviorSubject(StepsEnum.Definition);
+  currentStep$ = this.currentStepSubject.asObservable();
 
   sendPageNotification(data:any) {
-    this.currentPageSubject.next(data);
+    this.currentStepSubject.next(data);
   }
 
 

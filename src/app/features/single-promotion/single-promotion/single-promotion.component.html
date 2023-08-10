@@ -9,7 +9,7 @@
       <button
       class="promo-btn flex w-full items-center"
       data-id="definition"
-      setCurrentPage>
+      setCurrentStep>
       <span class="promo-btn__number">1</span>
       <span class="promo-btn__name">Definition</span>
     </button>
@@ -18,7 +18,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="choose-products"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">2</span>
         <span class="promo-btn__name">Choose Products</span>
@@ -28,7 +28,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="exclude-products"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">3</span>
         <span class="promo-btn__name">Exclude Products</span>
@@ -38,7 +38,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="bonus-products"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">4</span>
         <span class="promo-btn__name">Bonus Products</span>
@@ -48,7 +48,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="products-limits"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">5</span>
         <span class="promo-btn__name">Products Limits</span>
@@ -58,7 +58,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="choose-clients"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">6</span>
         <span class="promo-btn__name">Choose Clients</span>
@@ -68,7 +68,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="exclude-clients"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">7</span>
         <span class="promo-btn__name">Exclude Clients</span>
@@ -78,7 +78,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="clients-limits"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">8</span>
         <span class="promo-btn__name">Clients Limits</span>
@@ -88,7 +88,7 @@
       <button
         class="promo-btn flex w-full items-center"
         data-id="summary"
-        setCurrentPage
+        setCurrentStep
         [disabled]="this.stepActivationS.text.length ? !isDisabled : isDisabled">
         <span class="promo-btn__number">9</span>
         <span class="promo-btn__name">Summary</span>
@@ -97,7 +97,7 @@
   </ul>
   </div>
   <!-- SELECT CURRENT PAGE -->
-  <div class="w-3/4" [ngSwitch]="this.currentPage">
+  <div class="w-3/4" [ngSwitch]="this.currentStep">
     <app-definition *ngSwitchCase="'definition'"></app-definition>
     <app-choose-products *ngSwitchCase="'choose-products'"></app-choose-products>
     <app-exclude-products *ngSwitchCase="'exclude-products'"></app-exclude-products>
