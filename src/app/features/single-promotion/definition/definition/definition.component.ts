@@ -33,7 +33,7 @@ export class DefinitionComponent implements OnInit {
       finish_date: ['', Validators.required],
     });
     // Set Initial data if that data exists
-    this.fillForm('definition');
+    this.fillForm(StepsEnum.Definition);
     // Listen to Form Value Changes to set new Values inside form
     this.definitionForm.valueChanges.subscribe(value => {
       this.draftS.saveDraft(StepsEnum.Definition, value);
