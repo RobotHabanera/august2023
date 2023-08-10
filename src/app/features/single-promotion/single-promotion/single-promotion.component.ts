@@ -12,6 +12,7 @@ import { StepActivationService } from 'src/app/services/step-activation.service'
   ],
   styleUrls: ['./single-promotion.component.scss']
 })
+
 export class SinglePromotionComponent implements OnInit {
 
   isDisabled: boolean = true;
@@ -26,14 +27,11 @@ export class SinglePromotionComponent implements OnInit {
 
   ngOnInit():void {
     // Subscribe to Filter Button Event
-    this.currentPageSubscription = this.currentPageNotificationS.currentPage.subscribe(d => {
+    this.currentPageSubscription = this.currentPageNotificationS.currentPage$.subscribe(d => {
       this.currentPage = d;
     });
   }
 
-  ngAfterViewChecked():void {
-    console.log(this.currentPage);
-  }
 
 
 }

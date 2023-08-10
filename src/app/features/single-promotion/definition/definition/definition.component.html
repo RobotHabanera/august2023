@@ -1,8 +1,28 @@
+<form class="flex gap-1 h-full" [formGroup]="definitionForm">
 <div class="promo-column w-1/2 p-4 bg-gray-100">
   <h3 class="single-promo__heading">Description</h3>
-  <input class="block mb-6" type="text" placeholder="Marketing name" (input)="onChange($event)">
-  <input class="block mb-6" type="text" placeholder="Technical name" (input)="onChange($event)">
-  <textarea class="block w-full h-40 mb-14" type="text" placeholder="Description" (input)="onChange($event)"></textarea>
+  <input
+    class="block mb-6"
+    type="text"
+    placeholder="Marketing name"
+    (input)="onChange($event)"
+    formControlName="marketing_name"
+  >
+  <input
+    class="block mb-6"
+    type="text"
+    placeholder="Technical name"
+    (input)="onChange($event)"
+    formControlName="technical_name"
+  >
+  <textarea
+    class="block w-full h-40 mb-14"
+    type="text"
+    placeholder="Description"
+    (input)="onChange($event)"
+    formControlName="description"
+    >
+  </textarea>
   <h3 class="single-promo__heading">Catalog promotion tutorial</h3>
   <p>
     Proin nibh erat, commodo maximus leo vitae, interdum efficitur lectus. Morbi volutpat metus vitae lacus commodo, at dignissim ex consectetur. Maecenas venenatis tristique dictum. Morbi egestas ante vel massa accumsan, ut maximus nisl tempor. Vivamus et tellus id enim convallis efficitur vitae a ipsum. Ut sagittis purus sed nunc bibendum imperdiet. Praesent ac laoreet turpis. Donec arcu neque, commodo id est vitae, placerat consequat metus.
@@ -13,7 +33,10 @@
 </div>
 <div class="promo-column w-1/2 p-4 bg-gray-100">
   <h3 class="single-promo__heading">Conditions</h3>
-  <select class="w-full mb-6">
+  <select
+    class="w-full mb-6"
+    formControlName="portal"
+  >
     <option value="portal-1">
       Portal 1
     </option>
@@ -24,7 +47,10 @@
       Portal 3
     </option>
   </select>
-  <select class="w-full mb-12">
+  <select
+    class="w-full mb-12"
+    formControlName="type"
+	>
     <option value="type-1">
       Type 1
     </option>
@@ -41,13 +67,24 @@
       <label for="start-date">
         Start Date
       </label>
-      <input id="start-date" type="date" placeholder="Start date" value="">
+      <input
+				id="start-date"
+				type="date"
+				placeholder="Start date"
+				value=""
+				formControlName="start_date">
     </div>
     <div>
       <label for="finish-date">
         Finish Date
       </label>
-      <input id="finish-date" type="date" placeholder="Finish date" value="">
+      <input
+				id="finish-date"
+				type="date"
+				placeholder="Finish date"
+				value=""
+				formControlName="finish_date">
     </div>
   </div>
 </div>
+</form>

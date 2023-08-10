@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { DefinitionComponent } from './definition/definition.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +10,8 @@ import { DefinitionComponent } from './definition/definition.component';
     DefinitionComponent
   ],
   imports: [
-    CommonModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     DefinitionComponent

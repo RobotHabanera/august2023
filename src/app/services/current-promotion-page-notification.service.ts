@@ -10,7 +10,7 @@ export class CurrentPromotionPageNotificationService {
 
   // Change Category Value Notification
   public currentPageSubject: BehaviorSubject<string> = new BehaviorSubject('definition');
-  currentPage = this.currentPageSubject.asObservable();
+  currentPage$ = this.currentPageSubject.asObservable();
 
   sendPageNotification(data:any) {
     this.currentPageSubject.next(data);

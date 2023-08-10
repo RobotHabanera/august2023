@@ -16,7 +16,6 @@ export class SetCurrentPageDirective {
   @HostListener('click')
   getPage() {
     const selectedData = this.elRef.nativeElement.getAttribute('data-id');
-    console.log(selectedData);
     this.currentPageNotificationS.sendPageNotification(selectedData);
   }
 
