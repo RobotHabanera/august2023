@@ -14,7 +14,7 @@ export class SetCurrentStepDirective {
   ) { }
 
   @HostListener('click')
-  getPage() {
+  getStep() {
     const selectedData = this.elRef.nativeElement.getAttribute('data-id');
     this.currentStepNotificationS.sendStepNotification(selectedData);
   }
